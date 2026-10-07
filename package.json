@@ -1,0 +1,23 @@
+{
+  "name": "github-tutorial-video",
+  "version": "1.0.0",
+  "description": "A 27-minute GitHub tutorial for beginners, generated entirely from code (HTML + GSAP, rendered frame by frame with Puppeteer and FFmpeg).",
+  "private": true,
+  "scripts": {
+    "preview": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "snap": "node scripts/snap.mjs",
+    "render": "node scripts/render.mjs --workers 4",
+    "build": "node scripts/build.mjs",
+    "cover": "node scripts/cover.mjs && node scripts/cover.mjs --4x3"
+  },
+  "keywords": ["github", "git", "tutorial", "video", "gsap", "puppeteer", "motion-graphics"],
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@primer/css": "^22.3.2",
+    "@primer/octicons": "^19.38.0",
+    "gsap": "^3.15.0",
+    "puppeteer": "^25.12.0"
+  }
+}

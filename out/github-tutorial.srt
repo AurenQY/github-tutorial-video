@@ -1,0 +1,1094 @@
+﻿1
+00:00:04,100 --> 00:00:09,325
+欢迎！这个视频带你从零学会用 GitHub。
+Welcome! This video teaches you GitHub from scratch.
+
+2
+00:00:09,325 --> 00:00:17,963
+先分清两个词：Git 是装在电脑上的存档工具，记录文件的每一次修改。
+Two words first: Git is a save tool on your computer that records every change.
+
+3
+00:00:17,963 --> 00:00:25,438
+GitHub 是一个网站：把存档放到云端，还能和别人一起协作。
+GitHub is a website that keeps your saves in the cloud and lets you work with others.
+
+4
+00:00:25,438 --> 00:00:33,250
+开始前只需要两件事：电脑上装好 Git，并登录你的 GitHub 账号。
+Before we start: install Git, and sign in to your GitHub account.
+
+5
+00:00:33,250 --> 00:00:41,050
+接下来按界面上的按钮逐个讲，顺便讲清背后的原理。开始吧！
+We'll go button by button and explain how things work. Let's go!
+
+6
+00:00:45,867 --> 00:00:53,092
+这是一个 GitHub 仓库的首页。我们从上到下认识每个区域。
+This is a GitHub repository page. Let's go through it top to bottom.
+
+7
+00:00:53,092 --> 00:01:01,267
+仓库（repository）就是一个项目文件夹，外加它的全部修改历史。
+A repository is a project folder plus its complete history of changes.
+
+8
+00:01:01,267 --> 00:01:04,929
+左上角是用户名 / 仓库名。
+Top left: username / repository name.
+
+9
+00:01:04,929 --> 00:01:11,079
+它也是仓库的网址：github.com/用户名/仓库名。
+It's also the address: github.com/username/repo-name.
+
+10
+00:01:11,079 --> 00:01:19,854
+这一排是标签栏：代码、问题、合并请求、自动化、设置……后面逐个讲。
+This row of tabs: Code, Issues, Pull requests, Actions, Settings… covered one by one later.
+
+11
+00:01:19,854 --> 00:01:28,117
+Public 表示公开，任何人都能看；Private 只有你和你邀请的人能看。
+Public: anyone can see it. Private: only you and people you invite.
+
+12
+00:01:28,117 --> 00:01:35,117
+这里是当前所在的分支 main，后面是分支和标签的数量。
+This is the current branch, main, followed by the number of branches and tags.
+
+13
+00:01:35,117 --> 00:01:39,067
+Go to file 按名字快速找文件。
+Go to file finds a file by name.
+
+14
+00:01:39,067 --> 00:01:44,904
+Add file 可以新建文件，或者从电脑上传文件。
+Add file creates a new file, or uploads files from your computer.
+
+15
+00:01:45,104 --> 00:01:51,717
+绿色的 Code 按钮用来把仓库下载到电脑，第 5 章细讲。
+The green Code button gets the repo onto your computer (Chapter 5).
+
+16
+00:01:51,717 --> 00:02:00,767
+文件列表上方：最近一次提交是谁做的、什么时候，以及一共有几次提交。
+Above the files: who made the latest commit, when, and the total number of commits.
+
+17
+00:02:00,767 --> 00:02:09,067
+每一行是一个文件或文件夹，后面是最后修改它的提交说明和时间。
+Each row is a file or folder, with its last commit message and time.
+
+18
+00:02:09,067 --> 00:02:16,904
+右边 About 是简介，还有星标、关注、复刻的数量，第 11 章会讲。
+About on the right: a description, plus stars, watchers and forks (Chapter 11).
+
+19
+00:02:17,504 --> 00:02:24,792
+往下滚动，会看到 README.md 的内容，它是项目的"说明书"。
+Scroll down to see README.md, the "manual" of the project.
+
+20
+00:02:24,792 --> 00:02:35,692
+原理：GitHub 会自动寻找名叫 README 的文件，排好版放在首页。所以每个项目都应该写一个。
+How it works: GitHub looks for a file named README and shows it here, so every project should have one.
+
+21
+00:02:35,692 --> 00:02:43,929
+Languages 显示项目用了哪些编程语言，是 GitHub 按文件自动统计的。
+Languages shows which programming languages are used, counted automatically from the files.
+
+22
+00:02:44,529 --> 00:02:47,229
+本章小结。
+Chapter recap.
+
+23
+00:02:51,229 --> 00:02:55,754
+记住：仓库 = 项目文件 + 完整历史。
+Remember: repository = project files + full history.
+
+24
+00:03:00,567 --> 00:03:06,617
+刚才那个仓库是怎么来的？我们从头新建一个。
+Where did that repository come from? Let's create one from scratch.
+
+25
+00:03:06,617 --> 00:03:12,492
+在任何页面，点右上角的 +，选 New repository。
+On any page, click + at the top right and choose New repository.
+
+26
+00:03:12,642 --> 00:03:18,029
+首页左边的绿色 New 按钮，作用完全一样。
+The green New button on the left of your home page does the same thing.
+
+27
+00:03:19,029 --> 00:03:26,829
+先起名字：只用英文字母、数字和短横线，不要用空格和中文。
+First, a name: letters, numbers and dashes only, no spaces or Chinese.
+
+28
+00:03:26,829 --> 00:03:35,367
+绿色提示说明这个名字可以用。Description 是一句话简介，可以不填。
+Green means the name is free. Description is a one-line summary; optional.
+
+29
+00:03:35,367 --> 00:03:44,129
+Public 所有人可见，适合放作品；Private 只有自己能看，适合私人作业。
+Public: everyone can see it, good for showing work. Private: only you, good for personal work.
+
+30
+00:03:44,129 --> 00:03:49,429
+两种都免费，以后也能在设置里随时改。
+Both are free, and you can switch later in Settings.
+
+31
+00:03:49,429 --> 00:03:57,054
+勾选 Add a README file：仓库一建好就有说明书，可以直接使用。
+Check Add a README file so the repo starts with a manual and is ready to use.
+
+32
+00:03:57,054 --> 00:04:04,179
+.gitignore 模板：告诉 Git 哪些文件不要上传，第 7 章细讲。
+.gitignore template: tells Git which files not to upload (Chapter 7).
+
+33
+00:04:04,179 --> 00:04:13,267
+License 许可证：说明别人能不能使用你的代码。练习用的仓库可以先不选。
+License: says whether others may use your code. Skip it for practice repos.
+
+34
+00:04:13,267 --> 00:04:16,867
+最后点 Create repository。
+Finally, click Create repository.
+
+35
+00:04:17,867 --> 00:04:26,142
+建好了！里面已经有一个 README.md，还有第一次提交 Initial commit。
+Done! It already has README.md and its first commit, Initial commit.
+
+36
+00:04:26,742 --> 00:04:33,267
+仓库到底是什么？其实就是一个普通的项目文件夹……
+What is a repository? Really, just an ordinary project folder…
+
+37
+00:04:33,267 --> 00:04:41,242
+……里面多了一个隐藏的 .git 文件夹，所有存档和历史都存在那里。
+…plus a hidden .git folder where all the saves and history are stored.
+
+38
+00:04:41,242 --> 00:04:47,467
+GitHub 上的仓库，就是把这个文件夹放到了云端。
+A repository on GitHub is simply this folder, kept in the cloud.
+
+39
+00:04:48,067 --> 00:04:50,767
+本章小结。
+Chapter recap.
+
+40
+00:04:54,767 --> 00:05:00,517
+记住：仓库就是一个带着 .git 历史的文件夹。
+Remember: a repository is a folder with a .git history inside.
+
+41
+00:05:05,333 --> 00:05:12,146
+这是仓库首页。点开 README.md，看看单个文件的页面。
+This is the repo home page. Open README.md to see what a single file looks like.
+
+42
+00:05:12,146 --> 00:05:18,946
+这就是文件页。左边是文件树，用来在文件之间跳转。
+This is the file page. The file tree on the left lets you jump between files.
+
+43
+00:05:18,946 --> 00:05:25,496
+这一栏显示：最后一次是谁、什么时候、改了什么。
+This bar shows who changed it last, when, and what they changed.
+
+44
+00:05:25,496 --> 00:05:31,083
+Preview 显示排好版的效果，看起来像网页。
+Preview shows the formatted result, like a web page.
+
+45
+00:05:31,083 --> 00:05:35,833
+点 Code，看到的是文件的原始内容。
+Click Code to see the raw content of the file.
+
+46
+00:05:36,433 --> 00:05:42,358
+原来 # 和 - 都是排版符号，这种写法叫 Markdown。
+The # and - are formatting marks. This style is called Markdown.
+
+47
+00:05:42,358 --> 00:05:47,996
+左边的数字是行号，方便说"第 5 行有问题"。
+The numbers on the left are line numbers, handy for saying "line 5 has a problem".
+
+48
+00:05:47,996 --> 00:05:53,608
+右边这排按钮，先看 Raw，意思是"原始的"。
+Now the buttons on the right. First, Raw, meaning "unprocessed".
+
+49
+00:05:54,608 --> 00:06:01,908
+它打开一个纯文字页面，方便复制，或者给程序直接读取。
+It opens a plain-text page: easy to copy, or for programs to read directly.
+
+50
+00:06:02,508 --> 00:06:07,808
+这个是复制：一键复制整个文件的内容。
+This is Copy: copy the whole file in one click.
+
+51
+00:06:08,008 --> 00:06:13,558
+这个是下载：只把这一个文件存到电脑上。
+This is Download: save just this one file to your computer.
+
+52
+00:06:13,758 --> 00:06:19,558
+这支铅笔是编辑按钮：直接在网页上改文件。
+The pencil is the Edit button: change the file right in your browser.
+
+53
+00:06:20,558 --> 00:06:25,608
+进入编辑器了。我们在最后加两行字。
+We're in the editor. Let's add two lines at the end.
+
+54
+00:06:25,608 --> 00:06:31,458
+改完还没保存！要点右上角的 Commit changes...
+It's not saved yet! Click Commit changes... at the top right.
+
+55
+00:06:31,458 --> 00:06:37,608
+在 GitHub 上，修改必须提交（commit）才算保存。
+On GitHub, a change is only saved once you commit it.
+
+56
+00:06:37,608 --> 00:06:45,633
+先写一句提交说明：这次改了什么。要具体，别写"改了点东西"。
+Write a commit message saying what you changed. Be specific, not "changed stuff".
+
+57
+00:06:45,633 --> 00:06:53,471
+下面选"直接提交到 main"。另一个选项和分支有关，第 8 章再讲。
+Choose "Commit directly to main". The other option is about branches (Chapter 8).
+
+58
+00:06:53,471 --> 00:06:56,733
+最后点 Commit changes。
+Finally, click Commit changes.
+
+59
+00:06:56,733 --> 00:07:04,821
+成功！顶部出现了刚写的说明，还有一串编号 3f9c2a1。它是什么？
+Done! Your message is at the top, next to a code: 3f9c2a1. What is that?
+
+60
+00:07:05,421 --> 00:07:12,646
+commit 就像游戏存档：把整个项目此刻的样子拍一张快照。
+A commit is like a game save: a snapshot of the whole project at this moment.
+
+61
+00:07:12,646 --> 00:07:19,058
+每提交一次，就多一个存档。这个仓库现在有 4 个。
+Every commit adds one more save. This repo now has 4.
+
+62
+00:07:19,058 --> 00:07:27,858
+箭头表示：每个存档都记着上一个，连成一条历史链，随时可以回去看。
+Each save remembers the previous one, forming a history chain you can revisit anytime.
+
+63
+00:07:27,858 --> 00:07:35,158
+那串编号叫哈希值，由内容计算得出，是存档的身份证号。
+That code is a hash, calculated from the content: the save's ID number.
+
+64
+00:07:35,158 --> 00:07:42,208
+内容改一个字，号码就全变。所以历史没法被偷偷篡改。
+Change one character and the hash changes completely, so history can't be secretly altered.
+
+65
+00:07:42,808 --> 00:07:45,508
+本章小结。
+Chapter recap.
+
+66
+00:07:48,508 --> 00:07:53,233
+记住：改完必须 commit，才算保存。
+Remember: a change only counts once you commit it.
+
+67
+00:07:58,067 --> 00:08:05,367
+上一章我们提交了一次修改。怎么查看所有的修改记录呢？
+We made a commit in the last chapter. How do we see all the changes ever made?
+
+68
+00:08:05,367 --> 00:08:09,454
+点文件列表右上角的 Commits。
+Click Commits at the top right of the file list.
+
+69
+00:08:09,454 --> 00:08:18,254
+这就是提交历史：最新的在最上面，每条都有说明、作者、时间和编号。
+This is the commit history: newest on top, each with a message, author, time and code.
+
+70
+00:08:18,254 --> 00:08:24,054
+说明写得清楚，这个列表就像一本项目日记。
+With clear messages, this list reads like a diary of the project.
+
+71
+00:08:24,054 --> 00:08:29,354
+点开最上面这条，看看它到底改了什么。
+Let's open the top one and see exactly what it changed.
+
+72
+00:08:30,354 --> 00:08:36,404
+上面写着改了几个文件、加了几行、删了几行。
+At the top: how many files changed, and how many lines were added or removed.
+
+73
+00:08:36,404 --> 00:08:45,129
+下面就是 diff（差异）：绿色带 + 的是新增的行，红色带 - 的是删掉的行。
+Below is the diff: green + lines were added, red - lines were removed.
+
+74
+00:08:45,129 --> 00:08:52,904
+最上面 @@ 开头的一行，说明改动从第几行开始，可以先不管它。
+The line starting with @@ says where the change starts; you can ignore it for now.
+
+75
+00:08:53,504 --> 00:08:58,392
+原理：Git 把新旧两个版本逐行对比。
+How it works: Git compares the old and new versions line by line.
+
+76
+00:08:58,392 --> 00:09:04,892
+相同的行跳过，只把不同的行标出来，这就是 diff。
+Matching lines are skipped; only the differences are marked. That is a diff.
+
+77
+00:09:05,592 --> 00:09:12,679
+在文件页上，History 按钮只显示和这个文件有关的提交。
+On a file page, History shows only the commits that touched this file.
+
+78
+00:09:12,679 --> 00:09:15,792
+旁边的 Blame 更厉害：
+Blame, next to Code, goes even further:
+
+79
+00:09:16,292 --> 00:09:24,842
+每一行旁边都标出：是谁、在哪次提交里写的。颜色越深，改动越新。
+Next to every line: who wrote it, and in which commit. Darker means more recent.
+
+80
+00:09:24,842 --> 00:09:31,892
+程序出问题时特别有用：马上就能知道这一行该去问谁。
+Very handy when something breaks: you instantly know who to ask about a line.
+
+81
+00:09:32,492 --> 00:09:35,192
+本章小结。
+Chapter recap.
+
+82
+00:09:38,392 --> 00:09:42,529
+记住：Git 记得每一行的来历。
+Remember: Git remembers where every line came from.
+
+83
+00:09:47,333 --> 00:09:55,633
+到目前为止，我们都在网页上操作。怎么把仓库拿到自己电脑上呢？
+So far we've worked on the website. How do we get the repo onto our own computer?
+
+84
+00:09:56,233 --> 00:10:01,233
+点绿色的 Code 按钮，里面有两种方法。
+Click the green Code button. There are two ways.
+
+85
+00:10:01,233 --> 00:10:09,496
+Download ZIP：只下载文件的"复印件"，没有历史，也没法同步回去。
+Download ZIP: a plain copy of the files. Easy, but no history and no syncing back.
+
+86
+00:10:09,496 --> 00:10:16,508
+HTTPS 地址：配合 git clone，得到能来回同步的完整仓库。
+The HTTPS URL is used with git clone to get a full repository that stays in sync.
+
+87
+00:10:16,508 --> 00:10:20,808
+点右边的按钮，复制这个地址。
+Click the button on the right to copy the address.
+
+88
+00:10:21,608 --> 00:10:28,658
+打开 PowerShell：在开始菜单里搜索 PowerShell 就能找到。
+Open PowerShell: search for it in the Start menu.
+
+89
+00:10:28,658 --> 00:10:35,896
+先确认 Git 装好了：输入 git --version，能看到版本号就行。
+First check that Git is installed: type git --version and look for a version number.
+
+90
+00:10:35,896 --> 00:10:42,833
+用 cd 进入桌面（cd 就是 change directory，切换文件夹）。
+Use cd to go to the Desktop (cd = change directory).
+
+91
+00:10:42,833 --> 00:10:52,158
+输入 git clone，后面粘贴刚才复制的地址（在 PowerShell 里点右键就能粘贴）。
+Type git clone, then paste the address (right-click pastes in PowerShell).
+
+92
+00:10:52,158 --> 00:10:58,796
+完成！Git 把整个仓库连同全部历史，都下载下来了。
+Done! Git downloaded the whole repository, history included.
+
+93
+00:10:58,796 --> 00:11:06,071
+进入这个文件夹，再用 ls 列出文件：和网页上的一模一样。
+Go into the folder and list files with ls: exactly the same as on the website.
+
+94
+00:11:06,071 --> 00:11:11,671
+git log --oneline 查看历史：4 次提交全都在。
+git log --oneline shows the history: all 4 commits are here.
+
+95
+00:11:12,771 --> 00:11:21,308
+clone 之后，GitHub 上和你电脑上各有一份完整的仓库，包括全部历史。
+After cloning, GitHub and your computer each hold a complete copy, with full history.
+
+96
+00:11:21,308 --> 00:11:27,521
+Git 会把 GitHub 上那份记作 origin，意思是"来源"。
+Git calls the GitHub copy origin, meaning "where it came from".
+
+97
+00:11:27,521 --> 00:11:34,321
+之后的任务，就是让这两份保持同步。下一章就来做。
+From now on, the job is keeping the two in sync. That's next.
+
+98
+00:11:34,921 --> 00:11:37,621
+本章小结。
+Chapter recap.
+
+99
+00:11:41,621 --> 00:11:46,983
+记住：clone 得到的是带完整历史的仓库。
+Remember: clone gives you the full repository, history and all.
+
+100
+00:11:51,800 --> 00:12:00,113
+在电脑上 commit 之前，先告诉 Git 你是谁。每台电脑只需要设置一次。
+Before committing on your computer, tell Git who you are. Once per computer.
+
+101
+00:12:05,762 --> 00:12:13,738
+邮箱最好填注册 GitHub 用的那个，这样提交记录会显示你的头像。
+Use the email of your GitHub account so commits show your avatar.
+
+102
+00:12:14,238 --> 00:12:23,113
+现在随便改点东西：用记事本打开 hello.py，加一行，然后按 Ctrl+S 保存。
+Now change something: open hello.py in Notepad, add a line, press Ctrl+S to save.
+
+103
+00:12:23,613 --> 00:12:29,300
+回到 PowerShell。git status 查看现在的状态。
+Back in PowerShell. git status shows the current state.
+
+104
+00:12:29,300 --> 00:12:36,500
+hello.py 被修改了。红色表示：这个修改还没准备好提交。
+hello.py was modified. Red means the change is not yet ready to commit.
+
+105
+00:12:36,500 --> 00:12:43,600
+git add hello.py 把这个修改放进"暂存区"。再看一次状态：
+git add hello.py puts the change in the "staging area". Check the status again:
+
+106
+00:12:43,600 --> 00:12:49,650
+变成绿色了：这个修改已经准备好，等待提交。
+Now it's green: the change is staged and ready to commit.
+
+107
+00:12:49,650 --> 00:12:55,662
+git commit -m "说明" 提交，就在本地存了一个档。
+git commit -m "message" makes a save on your computer.
+
+108
+00:12:57,327 --> 00:13:05,352
+注意 "ahead by 1 commit"：这个存档只在你的电脑上，GitHub 还没有。
+Note "ahead by 1 commit": this save exists only on your computer, not on GitHub yet.
+
+109
+00:13:05,352 --> 00:13:10,364
+git push 把本地的新存档上传到 GitHub。
+git push uploads your new saves to GitHub.
+
+110
+00:13:10,664 --> 00:13:20,027
+第一次 push 会弹出登录窗口：点 Sign in with your browser，在浏览器里授权就行。
+The first push asks you to sign in: click Sign in with your browser and approve.
+
+111
+00:13:20,727 --> 00:13:25,614
+只要登录这一次，以后 Git 会记住你。
+You only sign in once; Git remembers you afterwards.
+
+112
+00:13:28,244 --> 00:13:34,907
+回到网页刷新：新的提交已经出现了！现在一共 5 次。
+Refresh the web page: the new commit is there! 5 commits now.
+
+113
+00:13:36,007 --> 00:13:43,844
+反过来：如果网页上有了新改动，用 git pull 把它们拉到电脑上。
+The other way round: if GitHub has new changes, git pull brings them to your computer.
+
+114
+00:13:43,844 --> 00:13:51,307
+现在两边一样，所以显示 "Already up to date"（已经是最新）。
+Both sides match right now, so it says "Already up to date".
+
+115
+00:13:51,907 --> 00:13:56,457
+把刚才的流程画出来，一共四站。
+Let's draw what just happened. There are four stops.
+
+116
+00:13:56,457 --> 00:14:03,757
+工作区：你正在编辑的文件，也就是文件夹里看到的样子。
+Working directory: the files you are editing, as you see them in the folder.
+
+117
+00:14:03,757 --> 00:14:12,482
+暂存区：git add 挑出这次要存的修改，就像寄快递前先把东西放进箱子。
+Staging area: git add picks the changes to save, like packing items into a box.
+
+118
+00:14:12,482 --> 00:14:18,794
+本地仓库：git commit 把箱子封好，存成一个存档。
+Local repository: git commit seals the box and stores it as a save.
+
+119
+00:14:18,794 --> 00:14:23,807
+远程仓库：git push 把存档寄到 GitHub。
+Remote repository: git push ships the saves to GitHub.
+
+120
+00:14:23,807 --> 00:14:29,819
+git pull 方向相反：把 GitHub 上的新存档取回来。
+git pull goes the other way: it fetches new saves from GitHub.
+
+121
+00:14:29,819 --> 00:14:39,869
+为什么要有暂存区？因为你可以只挑一部分修改提交，让每个存档都干净、有条理。
+Why a staging area? You can commit only some changes, keeping each save clean and focused.
+
+122
+00:14:40,469 --> 00:14:43,169
+本章小结。
+Chapter recap.
+
+123
+00:14:47,169 --> 00:14:51,519
+记住口诀：改 → add → commit → push。
+Remember the rhythm: edit → add → commit → push.
+
+124
+00:14:56,333 --> 00:15:00,558
+有些文件不应该上传到 GitHub：
+Some files should never go to GitHub:
+
+125
+00:15:00,558 --> 00:15:08,858
+尤其是公开仓库，里面的内容全世界都能看到，泄露密码就麻烦了。
+Anything in a public repo is visible to the whole world; leaking a password is serious.
+
+126
+00:15:09,358 --> 00:15:19,271
+比如运行程序后，多了一个缓存文件夹 __pycache__，还有一个存密码的 secret.txt。
+Say running the program created a __pycache__ folder, and you keep passwords in secret.txt.
+
+127
+00:15:19,271 --> 00:15:25,333
+Git 发现了它们，一不小心 git add 就会被传上去。
+Git sees them, and one careless git add would upload them.
+
+128
+00:15:25,833 --> 00:15:35,758
+解决办法：在仓库最外层新建一个叫 .gitignore 的文件，每行写一个要忽略的名字。
+The fix: create a file named .gitignore in the repo, one name to ignore per line.
+
+129
+00:15:35,758 --> 00:15:40,921
+# 开头的是注释，只是写给人看的说明。
+Lines starting with # are comments, notes for humans only.
+
+130
+00:15:41,421 --> 00:15:48,846
+保存后再看状态：那两个文件不见了，只剩 .gitignore 本身。
+Save it and check again: those two are gone. Only .gitignore itself remains.
+
+131
+00:15:48,846 --> 00:15:57,771
+把 .gitignore 也提交上去，这样每个下载这个仓库的人都遵守同样的规则。
+Commit .gitignore too, so everyone who clones the repo follows the same rules.
+
+132
+00:15:57,771 --> 00:16:07,796
+小技巧：在 GitHub 新建仓库时可以直接选 .gitignore 模板，比如 Python，省得自己写。
+Tip: when creating a repo on GitHub, pick a .gitignore template such as Python.
+
+133
+00:16:08,396 --> 00:16:18,158
+原理：Git 每次检查文件时，都会先对照 .gitignore 这份名单，名单上的直接跳过。
+How it works: Git checks .gitignore first and skips anything on the list.
+
+134
+00:16:18,158 --> 00:16:28,583
+注意：如果文件已经提交过，写进 .gitignore 也不会自动删掉，所以最好一开始就写好。
+Careful: files already committed stay in the repo, so set up .gitignore early.
+
+135
+00:16:29,183 --> 00:16:31,883
+本章小结。
+Chapter recap.
+
+136
+00:16:35,083 --> 00:16:39,808
+记住：密码永远不要上传到 GitHub。
+Remember: never upload passwords to GitHub.
+
+137
+00:16:44,633 --> 00:16:50,933
+想尝试新改动，又怕把能用的版本改坏？用分支。
+Want to try something without breaking the working version? Use a branch.
+
+138
+00:16:50,933 --> 00:16:59,208
+分支就像平行时间线：从某个存档分出去，在上面接着做新的存档……
+A branch is a parallel timeline: it splits off from a save and continues with new saves…
+
+139
+00:16:59,208 --> 00:17:07,433
+……而主线 main 完全不受影响。改好了再合并回去，改砸了直接扔掉。
+…while main stays untouched. Merge it back if it works; throw it away if not.
+
+140
+00:17:08,033 --> 00:17:13,033
+在网页上：点左上方的分支按钮 main。
+On the website: click the branch button, main.
+
+141
+00:17:13,633 --> 00:17:22,658
+列表里是所有分支，打勾的是当前所在的分支。在输入框里打一个新名字……
+It lists all branches; the tick marks the current one. Type a new name in the box…
+
+142
+00:17:22,658 --> 00:17:27,533
+……再点 Create branch，分支就建好了。
+…then click Create branch, and it's done.
+
+143
+00:17:27,533 --> 00:17:35,933
+分支名要简短、能看出在做什么，比如 add-greeting（添加问候语）。
+Keep branch names short and descriptive, like add-greeting.
+
+144
+00:17:37,033 --> 00:17:44,321
+在电脑上：git switch -c 分支名，新建一个分支并切换过去。
+On your computer: git switch -c name creates a branch and switches to it.
+
+145
+00:17:44,321 --> 00:17:50,883
+git branch 列出所有分支，带星号的是你当前所在的。
+git branch lists all branches; the star marks the current one.
+
+146
+00:17:51,383 --> 00:17:57,683
+在这个分支上，把问候语改得更热情一点，保存。
+On this branch, make the greeting warmer, then save.
+
+147
+00:17:58,183 --> 00:18:00,996
+照常 add 和 commit。
+Add and commit as usual.
+
+148
+00:18:02,219 --> 00:18:12,219
+第一次推送新分支，要写成 git push -u origin 分支名，告诉 Git 推到 GitHub 的哪个分支。
+The first push of a new branch: git push -u origin name tells Git where it goes.
+
+149
+00:18:12,219 --> 00:18:21,569
+现在 main 完全没变，新改动只在 add-greeting 上。怎么合并回主线？看下一章。
+main hasn't changed at all; the new work lives on add-greeting. Merging is next.
+
+150
+00:18:21,569 --> 00:18:29,831
+补充：git switch main 可以切回主线，文件夹里的文件会跟着变回去。
+Bonus: git switch main jumps back, and your files change back with it.
+
+151
+00:18:30,431 --> 00:18:33,131
+本章小结。
+Chapter recap.
+
+152
+00:18:37,131 --> 00:18:43,381
+记住：新功能放在分支上做，main 永远保持能用。
+Remember: build new things on a branch; keep main working.
+
+153
+00:18:48,200 --> 00:18:56,637
+推送分支后，仓库首页会出现一条黄色提示。点 Compare & pull request。
+After pushing a branch, a yellow banner appears. Click Compare & pull request.
+
+154
+00:18:57,637 --> 00:19:08,125
+Pull Request（简称 PR）就是"合并请求"：请大家看看我的改动，同意的话就合并进主线。
+A Pull Request (PR) asks: please review my changes, and merge them if they look good.
+
+155
+00:19:08,125 --> 00:19:14,863
+base 是要合并进去的分支 main，compare 是你的新分支。
+base is the branch to merge into (main); compare is your new branch.
+
+156
+00:19:14,863 --> 00:19:20,900
+Able to merge 表示两边没有冲突，可以自动合并。
+Able to merge means there are no conflicts; it can merge automatically.
+
+157
+00:19:20,900 --> 00:19:26,450
+写清楚标题和说明：改了什么、为什么改。
+Write a clear title and description: what changed, and why.
+
+158
+00:19:27,391 --> 00:19:31,103
+最后点 Create pull request。
+Then click Create pull request.
+
+159
+00:19:32,103 --> 00:19:37,578
+PR 建好了，绿色的 Open 表示正在等待处理。
+The PR is created. The green Open badge means it is waiting for review.
+
+160
+00:19:37,578 --> 00:19:47,116
+Conversation 是讨论区，Commits 是包含的提交，Files changed 是具体改了哪些行。
+Conversation is for discussion, Commits lists commits, Files changed shows the edits.
+
+161
+00:19:47,716 --> 00:19:57,841
+这里是改动的 diff。队友可以在任意一行留言提意见，这叫 Code Review（代码审查）。
+Here's the diff. Teammates can comment on any line. This is code review.
+
+162
+00:19:57,841 --> 00:20:05,566
+有意见就继续改、继续 push，PR 会自动更新，直到大家都满意。
+Need changes? Just commit and push again; the PR updates automatically.
+
+163
+00:20:06,166 --> 00:20:10,741
+没问题了，就点 Merge pull request……
+When everyone is happy, click Merge pull request…
+
+164
+00:20:10,741 --> 00:20:14,366
+……再点 Confirm merge 确认。
+…and Confirm merge.
+
+165
+00:20:14,966 --> 00:20:20,391
+变成紫色的 Merged：改动已经进入 main 了！
+Purple Merged: the changes are now in main!
+
+166
+00:20:20,391 --> 00:20:28,041
+分支已经完成任务，点 Delete branch 删掉它，让仓库保持整洁。
+The branch has done its job. Click Delete branch to keep things tidy.
+
+167
+00:20:29,141 --> 00:20:36,428
+最后回到电脑：切回 main，git pull 拿到合并后的最新代码。
+Back on your computer: switch to main and git pull the merged code.
+
+168
+00:20:37,028 --> 00:20:42,303
+原理：合并就是把两条时间线汇到一起……
+How it works: merging joins the two timelines…
+
+169
+00:20:42,303 --> 00:20:49,053
+……生成一个新的存档，它同时记着两条线的"上一个"。
+…into a new save that remembers the previous save of both lines.
+
+170
+00:20:49,053 --> 00:20:56,578
+PR 的价值在于：改动进入主线之前，先被别人看过、讨论过。
+The value of a PR: changes are reviewed and discussed before they reach main.
+
+171
+00:20:57,178 --> 00:20:59,878
+本章小结。
+Chapter recap.
+
+172
+00:21:04,678 --> 00:21:11,291
+记住：分支 → PR → 审查 → 合并，这就是团队协作的节奏。
+Remember: branch → PR → review → merge, the rhythm of teamwork.
+
+173
+00:21:16,100 --> 00:21:22,488
+Git 很聪明：两个人改不同的地方，它能自动合并。
+Git is smart: when two people change different places, it merges automatically.
+
+174
+00:21:22,488 --> 00:21:28,013
+但如果两个人把同一行改成了不同的样子……
+But if two people change the same line in different ways…
+
+175
+00:21:28,013 --> 00:21:35,875
+……Git 不知道该听谁的，只能停下来让人决定。这就是合并冲突。
+…Git can't know who is right, so it stops and asks a human. That's a merge conflict.
+
+176
+00:21:35,875 --> 00:21:41,675
+冲突不是错误，只是需要你做个选择，别慌。
+A conflict isn't an error. It just needs you to choose. Don't panic.
+
+177
+00:21:42,275 --> 00:21:50,600
+这时 PR 页面会提示有冲突，合并按钮也变灰了。点 Resolve conflicts。
+The PR now reports a conflict and the merge button is greyed out. Click Resolve conflicts.
+
+178
+00:21:51,600 --> 00:21:57,400
+冲突的地方被这样标了出来，我们来读一读。
+Here's how the conflict is marked. Let's read it.
+
+179
+00:21:57,400 --> 00:22:03,275
+<<<<<<< 到 ======= 之间，是你这个分支的版本。
+Between <<<<<<< and ======= is your branch's version.
+
+180
+00:22:03,275 --> 00:22:08,600
+======= 到 >>>>>>> 之间，是 main 上的版本。
+Between ======= and >>>>>>> is the version on main.
+
+181
+00:22:08,600 --> 00:22:18,150
+解决方法：删掉这三行标记，留下想要的内容。可以选一边，也可以两边结合。
+To resolve: delete the three marker lines and keep what you want, either side or a mix.
+
+182
+00:22:18,150 --> 00:22:24,700
+这里我们结合两边：保留中文的热情，也加上英文。
+Here we combine both: keep the warm Chinese greeting and add English.
+
+183
+00:22:24,700 --> 00:22:32,313
+改好后点 Mark as resolved（标记为已解决），再点 Commit merge。
+Then click Mark as resolved, and Commit merge.
+
+184
+00:22:33,313 --> 00:22:37,863
+冲突解决了，又可以正常合并了。
+Conflict resolved. The PR can be merged normally again.
+
+185
+00:22:38,463 --> 00:22:47,563
+电脑上 git pull 遇到冲突也一样：删掉标记、留下正确内容，再 add 和 commit。
+Conflicts during git pull work the same: edit the file, remove the markers, then add and commit.
+
+186
+00:22:48,163 --> 00:22:50,863
+本章小结。
+Chapter recap.
+
+187
+00:22:54,863 --> 00:23:01,413
+记住：冲突不可怕，删掉标记、留下对的内容就好。
+Remember: conflicts are fine: remove the markers, keep the right content.
+
+188
+00:23:06,233 --> 00:23:13,996
+这是别人的公开仓库。右上角有三个按钮：Watch、Fork、Star。
+This is someone else's public repo. Top right: Watch, Fork, Star.
+
+189
+00:23:13,996 --> 00:23:21,721
+Star（星标）= 收藏 + 点赞：方便以后找到，也是对作者的鼓励。
+Star = bookmark + like: easy to find later, and encouraging for the author.
+
+190
+00:23:21,721 --> 00:23:30,671
+点完变成黄色的 Starred，数字也加了 1。星越多，通常说明项目越受欢迎。
+It turns into a yellow Starred, and the count goes up. More stars usually means more popular.
+
+191
+00:23:30,671 --> 00:23:39,521
+Watch（关注）是订阅通知：选 All Activity，仓库有任何动静都会通知你。
+Watch subscribes to notifications: pick All Activity to hear about everything.
+
+192
+00:23:40,071 --> 00:23:47,071
+Fork（复刻）：把整个仓库复制一份到你自己的账号下。
+Fork copies the whole repository into your own account.
+
+193
+00:23:48,071 --> 00:23:57,571
+为什么要 Fork？因为你没有权限直接改别人的仓库，但可以随便改自己的副本。
+Why fork? You can't change someone else's repo, but you can change your own copy.
+
+194
+00:23:57,571 --> 00:24:01,246
+确认名字，点 Create fork。
+Check the name and click Create fork.
+
+195
+00:24:02,246 --> 00:24:10,896
+现在它在你名下了，下面还标着 "forked from"，说明是从哪里复制来的。
+Now it's under your name, with "forked from" showing where it came from.
+
+196
+00:24:11,496 --> 00:24:18,883
+在副本里改好并提交后，这里会显示"领先原仓库 1 个提交"。
+After you commit in your copy, it says you are "1 commit ahead" of the original.
+
+197
+00:24:18,883 --> 00:24:28,358
+点 Contribute → Open pull request，就能把改动提交给原作者，由他决定是否合并。
+Click Contribute → Open pull request to offer your changes; the owner decides.
+
+198
+00:24:29,508 --> 00:24:34,233
+整个流程：先 Fork 一份到自己名下……
+The full flow: first Fork a copy into your account…
+
+199
+00:24:34,233 --> 00:24:37,733
+……在副本上修改、提交……
+…edit and commit in your copy…
+
+200
+00:24:37,733 --> 00:24:42,246
+……再发 Pull Request 请原作者合并。
+…then send a Pull Request asking the owner to merge.
+
+201
+00:24:42,246 --> 00:24:48,796
+全世界成千上万的开源项目，都是这样一起完成的。
+Countless open-source projects around the world are built exactly this way.
+
+202
+00:24:49,596 --> 00:24:58,883
+最后看 Issues 标签：它是项目的"问题清单"，报 bug、提建议、记待办都用它。
+Finally, the Issues tab: the project's to-do list for bugs, ideas and tasks.
+
+203
+00:24:58,883 --> 00:25:02,083
+点 New issue 新建一个。
+Click New issue to create one.
+
+204
+00:25:03,083 --> 00:25:10,883
+标题一句话说清问题，描述里写清楚怎么发现的、希望怎么改。
+A one-line title, then describe how you found it and what should change.
+
+205
+00:25:10,883 --> 00:25:18,458
+右边的 Assignees 指定谁来负责，Labels 给问题分类，比如 bug。
+Assignees says who handles it; Labels categorise it, e.g. bug.
+
+206
+00:25:20,561 --> 00:25:26,399
+建好了！每个 Issue 都有一个编号，这个是 #3。
+Created! Every issue gets a number; this one is #3.
+
+207
+00:25:26,399 --> 00:25:32,849
+编号和 PR 共用一套，所以前面的两个 PR 占了 #1 和 #2。
+Issues and PRs share numbers, so our two PRs took #1 and #2.
+
+208
+00:25:32,849 --> 00:25:37,774
+修好之后，在 PR 说明里写上 Closes #3。
+Once fixed, write Closes #3 in the PR description.
+
+209
+00:25:38,374 --> 00:25:45,936
+PR 一合并，这个 Issue 就会自动关闭，并记录是哪个 PR 修好的。
+When that PR merges, the issue closes automatically and links to the fix.
+
+210
+00:25:46,536 --> 00:25:49,236
+本章小结。
+Chapter recap.
+
+211
+00:25:54,036 --> 00:26:00,186
+记住：Fork + PR 参与别人的项目，Issue 记录问题。
+Remember: Fork + PR to contribute; Issues to track problems.
+
+212
+00:26:05,000 --> 00:26:12,450
+最后一个标签 Settings（设置），只有仓库的主人才能看到。
+The last tab, Settings, is visible only to the repository owner.
+
+213
+00:26:12,450 --> 00:26:16,288
+General 里可以给仓库改名。
+Under General you can rename the repository.
+
+214
+00:26:16,288 --> 00:26:24,825
+拉到最下面是 Danger Zone（危险区）：改公开/私有、转让、删除仓库。
+At the bottom is the Danger Zone: change visibility, transfer, or delete the repo.
+
+215
+00:26:24,825 --> 00:26:33,050
+删除仓库无法恢复，GitHub 会让你输入仓库名确认，一定要想清楚。
+Deleting cannot be undone; GitHub makes you type the name to confirm. Be sure.
+
+216
+00:26:34,985 --> 00:26:44,760
+Collaborators（协作者）：点 Add people 邀请同学，他们就能直接往这个仓库提交。
+Collaborators: click Add people to invite friends who can then push directly.
+
+217
+00:26:45,960 --> 00:26:51,760
+这张速查表总结了整个视频，建议截图保存。
+This cheat sheet sums up the whole video. Take a screenshot!
+
+218
+00:26:58,560 --> 00:27:03,785
+恭喜你，GitHub 的核心用法你都学会了！
+Congratulations, you've learned the essentials of GitHub!
+
+219
+00:27:03,785 --> 00:27:13,010
+最好的练习方法：今天就建一个仓库，把学习笔记放上去，每天 commit 一次。
+Best practice: create a repo today, put your notes in it, and commit every day.

@@ -1,0 +1,151 @@
+/* More GitHub pages: dashboard, new repo, commits, diff, menus, pull requests, issues, settings. */
+
+/* ---------- generic ---------- */
+.gh h1.ph { font-size: 24px; font-weight: 400; margin: 0 0 8px; }
+.gh h2.ph2 { font-size: 20px; font-weight: 600; margin: 0 0 8px; }
+.gh .hr { border-top: 1px solid var(--borderColor-default); margin: 16px 0; }
+.gh .narrow { max-width: 760px; margin: 0 auto; padding: 32px 16px; }
+.gh .field { margin-bottom: 16px; }
+.gh .field label { display: block; font-weight: 600; margin-bottom: 6px; }
+.gh .field .hint { color: var(--fgColor-muted); font-size: 12px; margin-top: 4px; }
+.gh .in { height: 32px; border: 1px solid var(--borderColor-default); border-radius: 6px; padding: 0 12px; display: flex; align-items: center; background: var(--bgColor-default); }
+.gh .in.focus { border-color: var(--fgColor-accent); box-shadow: inset 0 0 0 1px var(--fgColor-accent); }
+.gh .in .ph { color: var(--fgColor-muted); }
+.gh .check { width: 16px; height: 16px; border: 1px solid #59636e; border-radius: 3px; display: inline-flex; align-items: center; justify-content: center; flex: none; margin-top: 2px; }
+.gh .check.on { background: var(--fgColor-accent); border-color: var(--fgColor-accent); color: #fff; }
+.gh .check svg { display: none; }
+.gh .check.on svg { display: block; }
+.gh .opt { display: flex; gap: 10px; align-items: flex-start; margin: 10px 0; }
+.gh .opt .ico { color: var(--fgColor-muted); margin-top: 2px; }
+.gh .opt .t { font-weight: 600; }
+.gh .opt .d { color: var(--fgColor-muted); font-size: 12px; }
+.gh .ok { color: var(--fgColor-success, #1a7f37); font-size: 12px; font-weight: 600; }
+.gh .flash-info { background: var(--bgColor-accent-muted, #ddf4ff); border: 1px solid #54aeff66; border-radius: 6px; padding: 12px 16px; display: flex; gap: 8px; align-items: center; }
+.gh .flash-warn { background: #fff8c5; border: 1px solid #d4a72c66; border-radius: 6px; padding: 12px 16px; display: flex; gap: 8px; align-items: center; }
+
+/* ---------- menus / dropdown overlays (placed inside .br-view by CSS px) ---------- */
+.gh-menu { position: absolute; background: #fff; border-radius: 12px; box-shadow: 0 0 0 1px #d1d9e080, 0 6px 12px -3px #25292e0a, 0 6px 18px 0 #25292e1f; padding: 8px 0; z-index: 15; font-size: 14px; }
+.gh-menu .mi { display: flex; align-items: center; gap: 8px; padding: 6px 16px; height: 32px; color: var(--fgColor-default); }
+.gh-menu .mi .octicon { color: var(--fgColor-muted); }
+.gh-menu .mi.hl { background: var(--bgColor-neutral-muted, #818b981f); }
+.gh-menu .sep { border-top: 1px solid var(--borderColor-default); margin: 8px 0; }
+.gh-menu .mh { padding: 8px 16px; font-weight: 600; display: flex; align-items: center; }
+.gh-menu .mh .octicon { margin-left: auto; color: var(--fgColor-muted); }
+.gh-menu .mtabs { display: flex; gap: 0; padding: 0 16px; border-bottom: 1px solid var(--borderColor-default); }
+.gh-menu .mtabs span { padding: 8px 12px; font-weight: 600; font-size: 14px; position: relative; color: var(--fgColor-muted); }
+.gh-menu .mtabs span.sel { color: var(--fgColor-default); }
+.gh-menu .mtabs span.sel::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: #fd8c73; border-radius: 6px; }
+.gh-menu .pad { padding: 12px 16px; }
+.gh-menu .urlrow { display: flex; gap: 4px; }
+.gh-menu .urlrow .in { flex: 1; font: 12px ui-monospace, Consolas, monospace; overflow: hidden; white-space: nowrap; }
+.gh-menu .chk { color: var(--fgColor-muted); width: 16px; }
+
+/* ---------- dashboard ---------- */
+.gh-dash { display: flex; }
+.gh-dash .side { width: 320px; padding: 24px; border-right: 1px solid var(--borderColor-default); min-height: 620px; background: var(--bgColor-default); }
+.gh-dash .side .top { display: flex; align-items: center; justify-content: space-between; font-weight: 600; margin-bottom: 12px; }
+.gh-dash .side .repo { display: flex; align-items: center; gap: 8px; margin: 10px 0; font-weight: 600; }
+.gh-dash .feed { flex: 1; padding: 24px 32px; background: var(--bgColor-default); }
+.gh-dash .card { border: 1px solid var(--borderColor-default); border-radius: 6px; padding: 16px; margin-bottom: 16px; }
+
+/* ---------- commits list ---------- */
+.gh-commit-group { margin-bottom: 16px; }
+.gh-commit-group .day { display: flex; align-items: center; gap: 8px; color: var(--fgColor-muted); margin: 0 0 8px; }
+.gh-commit-row { display: flex; align-items: center; padding: 12px 16px; border-top: 1px solid var(--borderColor-muted, #d1d9e0b3); gap: 8px; }
+.gh-commit-row:first-child { border-top: 0; }
+.gh-commit-row .main { flex: 1; min-width: 0; }
+.gh-commit-row .msg { font-weight: 600; font-size: 16px; }
+.gh-commit-row .by { display: flex; align-items: center; gap: 6px; color: var(--fgColor-muted); font-size: 12px; margin-top: 4px; }
+.gh-commit-row .sha { font: 12px ui-monospace, Consolas, monospace; }
+
+/* ---------- diff ---------- */
+.gh-diff-file { border: 1px solid var(--borderColor-default); border-radius: 6px; overflow: hidden; margin-bottom: 16px; }
+.gh-diff-file .fh { display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; background: var(--bgColor-muted, #f6f8fa); border-bottom: 1px solid var(--borderColor-default); font: 12px ui-monospace, Consolas, monospace; }
+.gh-diff-file .fh .octicon { color: var(--fgColor-muted); }
+.gh-diffstat { display: inline-flex; gap: 1px; margin-left: 4px; }
+.gh-diffstat i { width: 8px; height: 8px; display: inline-block; border-radius: 1px; background: #d1d9e0; }
+.gh-diffstat i.a { background: #1f883d; } .gh-diffstat i.d { background: #cf222e; }
+.gh-diff { font: 12px/20px ui-monospace, SFMono-Regular, Consolas, "Microsoft YaHei", monospace; }
+.gh-diff .dl { display: flex; }
+.gh-diff .n { width: 48px; text-align: right; padding-right: 10px; color: var(--fgColor-muted); flex: none; }
+.gh-diff .s { width: 20px; text-align: center; flex: none; }
+.gh-diff .c { white-space: pre; flex: 1; }
+.gh-diff .dl.add { background: #dafbe1; } .gh-diff .dl.add .n { background: #aceebb; color: #1f2328; }
+.gh-diff .dl.del { background: #ffebe9; } .gh-diff .dl.del .n { background: #ffcecb; color: #1f2328; }
+.gh-diff .dl.hunk { background: #ddf4ff; color: var(--fgColor-muted); } .gh-diff .dl.hunk .n { background: #b6e3ff; }
+.gh-diff .dl.cmt { background: #fff; padding: 12px 16px 12px 116px; display: block; border-top: 1px solid var(--borderColor-default); border-bottom: 1px solid var(--borderColor-default); font-family: inherit; }
+
+/* ---------- blame ---------- */
+.gh-blame .br { display: flex; border-top: 1px solid var(--borderColor-muted, #d1d9e0b3); }
+.gh-blame .meta { width: 360px; flex: none; display: flex; align-items: flex-start; gap: 8px; padding: 6px 12px; font-size: 12px; border-right: 1px solid var(--borderColor-default); }
+.gh-blame .meta .age { color: var(--fgColor-muted); width: 74px; flex: none; }
+.gh-blame .meta .m { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.gh-blame .meta .age-bar { width: 3px; align-self: stretch; border-radius: 2px; flex: none; }
+.gh-blame .lines { flex: 1; padding: 6px 0; font: 12px/20px ui-monospace, Consolas, "Microsoft YaHei", monospace; }
+
+/* ---------- pull requests / issues ---------- */
+.gh-state { display: inline-flex; align-items: center; gap: 4px; height: 32px; padding: 0 12px; border-radius: 2em; color: #fff; font-weight: 500; font-size: 14px; }
+.gh-state .octicon { color: #fff; }
+.gh-state.open { background: #1f883d; } .gh-state.merged { background: #8250df; } .gh-state.closed { background: #cf222e; }
+.gh-pr-title { font-size: 32px; font-weight: 400; margin: 0 0 8px; }
+.gh-pr-title .num { color: var(--fgColor-muted); font-weight: 300; }
+.gh-pr-sub { display: flex; align-items: center; gap: 8px; color: var(--fgColor-muted); padding-bottom: 16px; border-bottom: 1px solid var(--borderColor-default); margin-bottom: 0; }
+.gh-branch-tag { font: 12px ui-monospace, Consolas, monospace; background: #ddf4ff; color: #0969da; padding: 2px 6px; border-radius: 6px; }
+.gh-prtabs { display: flex; gap: 0; border-bottom: 1px solid var(--borderColor-default); margin-bottom: 16px; }
+.gh-prtabs span { display: flex; align-items: center; gap: 8px; padding: 0 16px; height: 44px; color: var(--fgColor-muted); position: relative; }
+.gh-prtabs span .octicon { color: var(--fgColor-muted); }
+.gh-prtabs span.sel { color: var(--fgColor-default); font-weight: 600; border: 1px solid var(--borderColor-default); border-bottom-color: #fff; border-radius: 6px 6px 0 0; margin-bottom: -1px; background: #fff; }
+.gh-comment { display: flex; gap: 16px; margin-bottom: 16px; }
+.gh-comment .bx { flex: 1; border: 1px solid var(--borderColor-default); border-radius: 6px; overflow: hidden; }
+.gh-comment .ch { background: var(--bgColor-muted, #f6f8fa); border-bottom: 1px solid var(--borderColor-default); padding: 8px 16px; color: var(--fgColor-muted); }
+.gh-comment .ch b { color: var(--fgColor-default); }
+.gh-comment .cb { padding: 16px; font-size: 14px; }
+.gh-mergebox { display: flex; gap: 16px; }
+.gh-mergebox .icon { width: 40px; height: 40px; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; flex: none; }
+.gh-mergebox .bx { flex: 1; border: 1px solid var(--borderColor-default); border-radius: 6px; }
+.gh-mergebox .row { display: flex; gap: 12px; align-items: flex-start; padding: 16px; border-bottom: 1px solid var(--borderColor-default); }
+.gh-mergebox .row:last-child { border-bottom: 0; }
+.gh-mergebox .row .ri { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex: none; color: #fff; }
+.gh-mergebox .row .t { font-weight: 600; font-size: 16px; }
+.gh-mergebox .row .d { color: var(--fgColor-muted); font-size: 12px; }
+.gh-mergebox .foot { padding: 16px; display: flex; gap: 8px; align-items: center; }
+.gh-timeline { margin-left: 56px; border-left: 2px solid var(--borderColor-muted, #d1d9e0b3); padding: 8px 0 8px 16px; margin-bottom: 16px; color: var(--fgColor-muted); }
+.gh-timeline .ev { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
+.gh-sidebar-item { padding: 0 0 16px; margin-bottom: 16px; border-bottom: 1px solid var(--borderColor-muted, #d1d9e0b3); }
+.gh-sidebar-item .h { display: flex; justify-content: space-between; color: var(--fgColor-muted); font-weight: 600; font-size: 12px; margin-bottom: 8px; }
+.gh-sidebar-item .v { color: var(--fgColor-muted); font-size: 12px; }
+.gh-label { display: inline-block; padding: 0 7px; border-radius: 2em; font-size: 12px; font-weight: 500; line-height: 18px; border: 1px solid transparent; }
+.gh-range { display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--bgColor-muted, #f6f8fa); border: 1px solid var(--borderColor-default); border-radius: 6px; margin-bottom: 16px; }
+.gh-mdbox { border: 1px solid var(--borderColor-default); border-radius: 6px; overflow: hidden; }
+.gh-mdbox .tabs { display: flex; align-items: flex-end; height: 40px; background: var(--bgColor-muted, #f6f8fa); border-bottom: 1px solid var(--borderColor-default); padding: 0 8px; }
+.gh-mdbox .tabs span { height: 32px; display: flex; align-items: center; padding: 0 12px; color: var(--fgColor-muted); border: 1px solid transparent; border-bottom: 0; border-radius: 6px 6px 0 0; margin-bottom: -1px; }
+.gh-mdbox .tabs span.sel { background: #fff; border-color: var(--borderColor-default); color: var(--fgColor-default); }
+.gh-mdbox .body { min-height: 110px; padding: 8px 12px; white-space: pre-wrap; }
+.gh-mdbox .body .ph { color: var(--fgColor-muted); }
+.gh-issue-list .row { display: flex; gap: 8px; align-items: flex-start; padding: 10px 16px; border-top: 1px solid var(--borderColor-muted, #d1d9e0b3); }
+.gh-issue-list .row .t { font-weight: 600; font-size: 16px; }
+.gh-issue-list .row .d { color: var(--fgColor-muted); font-size: 12px; }
+
+/* ---------- conflict editor ---------- */
+.gh-conflict .mk { background: #fff8c5; }
+.gh-conflict .mine { background: #ddf4ff; }
+.gh-conflict .theirs { background: #dafbe1; }
+
+/* ---------- settings ---------- */
+.gh-settings { display: flex; gap: 24px; padding: 24px 32px; }
+.gh-settings nav { width: 240px; flex: none; }
+.gh-settings nav .ni { display: flex; align-items: center; gap: 8px; height: 32px; padding: 0 8px; border-radius: 6px; color: var(--fgColor-default); position: relative; }
+.gh-settings nav .ni .octicon { color: var(--fgColor-muted); }
+.gh-settings nav .ni.sel { background: var(--bgColor-neutral-muted, #818b981f); font-weight: 600; }
+.gh-settings nav .ni.sel::before { content: ""; position: absolute; left: -8px; top: 6px; bottom: 6px; width: 4px; border-radius: 6px; background: var(--fgColor-accent); }
+.gh-settings nav .grp { color: var(--fgColor-muted); font-size: 12px; font-weight: 600; padding: 12px 8px 4px; }
+.gh-settings main { flex: 1; min-width: 0; }
+.gh-settings .sh { font-size: 24px; font-weight: 400; padding-bottom: 8px; border-bottom: 1px solid var(--borderColor-default); margin-bottom: 16px; }
+.gh-danger { border: 1px solid #cf222e; border-radius: 6px; }
+.gh-danger .dr { display: flex; align-items: center; justify-content: space-between; padding: 16px; border-top: 1px solid var(--borderColor-default); gap: 16px; }
+.gh-danger .dr:first-child { border-top: 0; }
+.gh-danger .dr .t { font-weight: 600; }
+.gh-danger .dr .d { color: var(--fgColor-muted); font-size: 14px; }
+.btn-danger-outline { color: #cf222e !important; }
+.gh-fork-note { font-size: 12px; color: var(--fgColor-muted); margin-top: -12px; margin-bottom: 12px; }
+.gh-ahead { display: flex; align-items: center; gap: 8px; padding: 10px 16px; border: 1px solid var(--borderColor-default); border-radius: 6px; margin-bottom: 16px; background: var(--bgColor-muted, #f6f8fa); }

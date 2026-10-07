@@ -1,0 +1,49 @@
+/* Windows Terminal + Windows PowerShell (Campbell scheme). The window is laid out in CSS px and scaled 1.5x. */
+.term-scene {
+  background:
+    radial-gradient(900px 600px at 70% 80%, #3a6fd8 0%, transparent 60%),
+    radial-gradient(800px 600px at 20% 20%, #7aa7f2 0%, transparent 60%),
+    linear-gradient(135deg, #a9c6f7 0%, #3d6fcf 55%, #1f3f8f 100%);
+}
+.term-win {
+  position: absolute; left: 20px; top: 14px; width: 1253px; height: 700px; transform: scale(1.5); transform-origin: 0 0;
+  background: #0c0c0c; border-radius: 8px; overflow: hidden; box-shadow: 0 0 0 1px #ffffff22, 0 20px 50px rgba(0,0,0,.45);
+  display: flex; flex-direction: column;
+}
+.term-titlebar { height: 40px; background: #1f1f1f; display: flex; align-items: flex-end; padding-left: 8px; position: relative; flex: none; }
+.term-tab {
+  height: 32px; width: 240px; background: #0c0c0c; border-radius: 8px 8px 0 0; display: flex; align-items: center; gap: 10px; padding: 0 12px;
+  font: 12px "Segoe UI", sans-serif; color: #fff;
+}
+.term-tab .x { margin-left: auto; color: #aaa; font-size: 11px; }
+.term-new { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; color: #ccc; font-size: 14px; }
+.term-ctrl { position: absolute; right: 0; top: 0; height: 40px; display: flex; }
+.term-ctrl span { width: 46px; display: flex; align-items: center; justify-content: center; color: #ddd; font: 12px "Segoe UI Symbol", sans-serif; }
+.term-body { flex: 1; overflow: hidden; padding: 6px 10px; position: relative; }
+.term-content { font: 15px/21px "Cascadia Mono", Consolas, "Microsoft YaHei", monospace; color: #cccccc; }
+.term-line { white-space: pre-wrap; word-break: break-all; min-height: 21px; }
+.term-line .cmd { color: #f2f2f2; }
+.term-cursor { display: inline-block; width: 9px; height: 17px; background: #cccccc; vertical-align: -3px; }
+.c-red { color: #e74856; } .c-green { color: #16c60c; } .c-yellow { color: #f9f1a5; } .c-cyan { color: #61d6d6; }
+.c-gray { color: #767676; } .c-b { color: #f2f2f2; } .c-blue { color: #3b78ff; }
+
+/* ---------- Windows 11 Notepad ---------- */
+.np-win { position: absolute; left: 160px; top: 40px; width: 1066px; height: 640px; transform: scale(1.5); transform-origin: 0 0; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 0 0 1px #0000001a, 0 20px 50px rgba(0,0,0,.4); display: flex; flex-direction: column; font-family: "Segoe UI", "Microsoft YaHei", sans-serif; }
+.np-title { height: 40px; background: #f3f3f3; display: flex; align-items: center; gap: 10px; padding-left: 14px; font-size: 12px; color: #1f1f1f; position: relative; }
+.np-ico { width: 16px; height: 16px; border-radius: 3px; background: linear-gradient(135deg, #4cc2ff, #0078d4); }
+.np-ctrl { position: absolute; right: 0; top: 0; height: 40px; display: flex; }
+.np-ctrl span { width: 46px; display: flex; align-items: center; justify-content: center; font-size: 12px; }
+.np-menu { height: 32px; background: #f9f9f9; display: flex; align-items: center; gap: 18px; padding-left: 16px; font-size: 13px; color: #1f1f1f; border-bottom: 1px solid #e5e5e5; }
+.np-body { flex: 1; padding: 10px 16px; font: 16px/24px Consolas, "Microsoft YaHei", monospace; color: #1f1f1f; }
+.np-line { white-space: pre; min-height: 24px; }
+.np-status { height: 28px; background: #f3f3f3; border-top: 1px solid #e5e5e5; display: flex; gap: 28px; align-items: center; padding: 0 16px; font-size: 12px; color: #555; }
+
+/* ---------- Git Credential Manager window (world px) ---------- */
+.gcm { position: absolute; left: 660px; top: 170px; width: 600px; background: #fff; border-radius: 12px; box-shadow: 0 0 0 1px #0002, 0 30px 80px rgba(0,0,0,.5); font-family: "Segoe UI", sans-serif; overflow: hidden; z-index: 20; }
+.gcm-title { height: 48px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; font-size: 18px; background: #f3f3f3; }
+.gcm-body { padding: 36px 60px 40px; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.gcm-h { font-size: 30px; font-weight: 600; color: #1f2328; }
+.gcm-btn { width: 100%; height: 56px; border-radius: 9px; background: #1f883d; color: #fff; font-size: 22px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+.gcm-or { color: #59636e; font-size: 18px; }
+.gcm-link { color: #0969da; font-size: 20px; }
+.gcm-foot { color: #59636e; font-size: 17px; margin-top: 10px; }

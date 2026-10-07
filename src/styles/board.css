@@ -1,0 +1,26 @@
+.board {
+  background:
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,.05) 1.2px, transparent 0) 0 0 / 40px 40px,
+    radial-gradient(1400px 800px at 50% 40%, #161d2b 0%, #0d1117 75%);
+  font-family: "Microsoft YaHei", "Segoe UI", sans-serif; color: #e6edf3;
+}
+.board-svg { position: absolute; left: 0; top: 0; overflow: visible; }
+.board-title { position: absolute; left: 0; right: 0; top: 64px; text-align: center; font-size: 56px; font-weight: 700; letter-spacing: 1px; }
+.board-title .kicker { display: inline-block; font-size: 28px; font-weight: 700; color: #0d1117; background: #ffb000; border-radius: 10px; padding: 4px 16px; margin-right: 20px; vertical-align: 10px; }
+.bw { position: absolute; }
+.b-text { white-space: nowrap; line-height: 1.45; }
+.b-text b { color: #ffd33d; }
+.b-text code { font-family: "Cascadia Mono", Consolas, monospace; color: #7ee787; background: rgba(255,255,255,.08); padding: 0 10px; border-radius: 8px; }
+.b-node { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.b-node .dot { border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font: 700 26px "Cascadia Mono", Consolas, monospace; }
+.b-node .lab { font-size: 30px; font-weight: 700; white-space: nowrap; }
+.b-node .sub2 { font-size: 24px; color: #9198a1; white-space: nowrap; font-family: "Cascadia Mono", Consolas, "Microsoft YaHei", monospace; }
+.b-box { border: 4px solid; border-radius: 22px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 22px; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+.b-box .bt { font-size: 32px; font-weight: 700; margin-bottom: 14px; white-space: nowrap; }
+.b-box .bb { font-size: 26px; color: #c9d1d9; text-align: center; line-height: 1.5; width: 100%; }
+.b-chip { border: 3px solid; border-radius: 999px; padding: 8px 26px; background: #161b22; white-space: nowrap; font-weight: 600; }
+.b-file { display: inline-flex; align-items: center; gap: 10px; background: #21262d; border: 2px solid #30363d; border-radius: 10px; padding: 6px 14px; font-size: 24px; margin: 6px; font-family: "Cascadia Mono", Consolas, "Microsoft YaHei", monospace; }
+.board .b-text code { font-size: 0.9em; line-height: 1.4; }
+.board .b-row { display: flex; align-items: center; gap: 36px; }
+.board .b-row .k { width: 400px; flex: none; text-align: right; }
+.board .b-row .k code { display: inline-block; padding: 4px 18px; }

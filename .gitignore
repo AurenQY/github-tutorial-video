@@ -1,0 +1,11 @@
+node_modules/
+
+# Render outputs (large; the finished video is published as a GitHub Release asset)
+out/parts/
+out/tmp/
+out/*.mp4
+out/cover-src.png
+out/sample-*
+
+# Local tooling
+.claude/

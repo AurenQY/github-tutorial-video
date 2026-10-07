@@ -1,0 +1,86 @@
+﻿html, body { margin: 0; padding: 0; background: #000; overflow: hidden; }
+body.dev { background: #222; }
+
+#stage {
+  position: relative; width: 1920px; height: 1080px; overflow: hidden;
+  transform-origin: 0 0; background: #e9edf2;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, "Microsoft YaHei", sans-serif;
+}
+#world { position: absolute; inset: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+.scene { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; }
+.hid { opacity: 0; visibility: hidden; }
+
+/* ---------- overlay: subtitles + title cards ---------- */
+#overlay { position: absolute; inset: 0; pointer-events: none; }
+.sub {
+  position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%);
+  max-width: 1500px; width: max-content;
+  padding: 8px 26px 10px; border-radius: 10px;
+  background: rgba(0, 0, 0, 0.75); color: #fff;
+  font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+  text-align: center;
+  opacity: 0; visibility: hidden;
+}
+.sub .zh { font-size: 32px; line-height: 1.4; font-weight: 500; letter-spacing: 0.5px; }
+.sub .en { font-size: 22px; line-height: 1.35; font-family: "Segoe UI", "Microsoft YaHei", sans-serif; margin-top: 2px; }
+.sub b { color: #fff; font-weight: 700; }
+.sub code {
+  font-family: "Cascadia Mono", Consolas, "Microsoft YaHei", monospace; font-size: 0.92em;
+  background: rgba(255,255,255,.16); color: #fff; padding: 0 8px; border-radius: 6px;
+}
+.tc-en { font-size: 34px; color: #9198a1; margin-top: 18px; font-family: "Segoe UI", sans-serif; letter-spacing: 1px; }
+
+.title-card {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: radial-gradient(1200px 700px at 50% 45%, #1b2333 0%, #0d1117 70%);
+  color: #fff; font-family: "Microsoft YaHei", sans-serif; z-index: 5;
+}
+.tc-kicker { font-size: 38px; color: #7d8590; letter-spacing: 6px; margin-bottom: 18px; }
+.tc-title { font-size: 92px; font-weight: 700; letter-spacing: 2px; }
+.tc-line { width: 240px; height: 6px; margin-top: 36px; border-radius: 3px; background: linear-gradient(90deg, #2f81f7, #a371f7, #f778ba); transform-origin: 50% 50%; }
+
+/* ---------- cursor / spotlight / ripple ---------- */
+#cursor { position: absolute; left: 0; top: 0; z-index: 60; width: 32px; height: 32px; margin: -3px 0 0 -4px; filter: drop-shadow(1px 2px 2px rgba(0,0,0,.35)); }
+.spot {
+  position: absolute; z-index: 50; box-sizing: border-box;
+  border: 4px solid #ffb000;
+  box-shadow: 0 0 0 4000px rgba(13, 17, 23, 0.55), 0 0 24px rgba(255, 176, 0, .55);
+}
+.spot-label {
+  position: absolute; left: 50%; transform: translateX(-50%); white-space: nowrap;
+  background: #ffb000; color: #1f2328; font-family: "Microsoft YaHei", "Segoe UI", sans-serif; font-weight: 700;
+  box-shadow: 0 4px 14px rgba(0,0,0,.3);
+}
+.ripple { position: absolute; left: -34px; top: -34px; width: 68px; height: 68px; border-radius: 50%; background: rgba(9, 105, 218, .45); border: 3px solid rgba(9,105,218,.8); z-index: 55; }
+
+/* ---------- Chrome-like browser window (1280x720 CSS px, scaled 1.5x) ---------- */
+.browser {
+  position: absolute; left: 0; top: 0; width: 1280px; height: 720px; transform: scale(1.5); transform-origin: 0 0;
+  background: #fff; overflow: hidden; display: flex; flex-direction: column;
+}
+.br-tabs { height: 34px; background: #dfe3e8; display: flex; align-items: flex-end; padding-left: 8px; position: relative; flex: none; }
+.br-tab {
+  height: 28px; width: 240px; background: #fff; border-radius: 8px 8px 0 0; display: flex; align-items: center; gap: 8px;
+  padding: 0 10px; font: 12px "Segoe UI", sans-serif; color: #1f1f1f;
+}
+.br-tab svg { flex: none; }
+.br-tab .x { margin-left: auto; color: #5f6368; font-size: 13px; }
+.br-win { position: absolute; right: 0; top: 0; display: flex; height: 34px; }
+.br-win span { width: 46px; display: flex; align-items: center; justify-content: center; color: #1f1f1f; font: 13px "Segoe UI Symbol", sans-serif; }
+.br-bar { height: 38px; background: #fff; display: flex; align-items: center; gap: 6px; padding: 0 8px; border-bottom: 1px solid #dadce0; flex: none; }
+.br-bar .nav { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; color: #474747; font-size: 16px; }
+.br-url {
+  flex: 1; height: 28px; border-radius: 14px; background: #edf2fa; display: flex; align-items: center; gap: 8px; padding: 0 12px;
+  font: 13px "Segoe UI", sans-serif; color: #1f1f1f;
+}
+.br-url .host { color: #1f1f1f; }
+.br-url .path { color: #5f6368; }
+.br-view { position: relative; flex: 1; overflow: hidden; background: #fff; }
+.br-progress { position: absolute; left: 0; top: 0; height: 3px; width: 100%; background: #0969da; transform-origin: 0 0; transform: scaleX(0); z-index: 10; }
+.page { position: absolute; left: 0; top: 0; width: 1280px; min-height: 100%; background: #fff; }
+
+/* ---------- dev controls ---------- */
+#dev { position: fixed; left: 0; right: 0; bottom: 0; height: 48px; display: flex; align-items: center; gap: 12px; padding: 0 12px; background: #111; color: #ddd; font: 14px sans-serif; }
+#dev[hidden] { display: none; }
+#dev-range { flex: 1; }
+#dev button { width: 44px; height: 32px; }
